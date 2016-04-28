@@ -1,0 +1,18 @@
+{
+    "contents" : "library(rvest)\n#loobime veebist andmed\ntulem=c()\nfor (i in 1:100) {\n  url=paste0(\"http://register.fin.ee/register/index.php?&asuttyyp=&regname=&tunnus=aruanded&regkoodfrom=&regkoodto=&aadr=&korgkood=&action=searchnow&out=&slimit=999&report=72&page=\",\n  i)\n  html_source =url\n  page = read_html(html_source)\n  tekst=page %>% \n    html_nodes(\".table_system td\") %>%\n    html_text()\n  tulem=c(tulem, tekst)\n  tekst=c()#järgmiseks loobiks nulli ära\n}\n\n#puhastame sodi välja\ntulem=gsub(\"\\n\", \"\", tulem)\neemalda=c(\"Asutuse registrikood\", \"Asutuse tĆ¤isnimi\", \"Maakond, linn/vald, kĆ¼la\",\n          \"TĆ¤nav/maja\", \"Arhiv. kp\", \"LĆµp.akt.nimi\", \"LĆµpet. nr\",\n          \"LĆµpetamise akti kuupĆ¤ev\", \"LĆµpet.kp\", \"Arhiivis\", \"E-mail\")\ntulempuhas=tulem[!tulem %in% eemalda]\ntulempuhas=gsub(\"Ā\", \"\", tulempuhas)\nlibrary(stringr)\ntulempuhas=str_trim(tulempuhas, side = c(\"both\"))\n\n#teeme dataframe'i andmetest\nrkoarr=data.frame(NULL)\n#loobime väärtused dataframe\nfor (i in 1:(length(tulempuhas)/11)) {\n  for (j in 1:11) {\n    rkoarr[i, j]=tulempuhas[(i-1)*11+j]\n  }\n}\n#anname veergudele nimed\nnames(rkoarr)=c(\"Asutuse registrikood\", \"Asutuse täisnimi\", \"Maakond, linn/vald, kĆ¼la\",\n                \"Tänav/maja\", \"Arhiv. kp\", \"Lõp.akt.nimi\", \"Lõpet. nr\",\n                \"Lõpetamise akti kuupäev\", \"Lõpet.kp\", \"Arhiivis\", \"E-mail\")\n#täpitähed korrektseks\nrkoarr=as.data.frame(lapply(rkoarr, function(y) gsub(\"Ć¼\", \"ü\", y)))\nrkoarr=as.data.frame(lapply(rkoarr, function(y) gsub(\"Ćµ\", \"õ\", y)))\nrkoarr=as.data.frame(lapply(rkoarr, function(y) gsub(\"Ć¤\", \"ä\", y)))\nrkoarr=as.data.frame(lapply(rkoarr, function(y) gsub(\"Ć¶\", \"ö\", y)))\nrkoarr=as.data.frame(lapply(rkoarr, function(y) gsub(\"Ć„\", \"Ä\", y)))\nrkoarr=as.data.frame(lapply(rkoarr, function(y) gsub(\"Ć„\", \"Ä\", y)))\nrkoarr=as.data.frame(lapply(rkoarr, function(y) gsub(\"Ć\", \"Ü\", y)))\n\n#salvestame\nwrite.table(rkoarr, \"rkoarr.csv\", row.names = F, sep=\";\")\n\n\n",
+    "created" : 1461765588566.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "255497334",
+    "id" : "97514D2A",
+    "lastKnownWriteTime" : 1461837311,
+    "path" : "~/R/RKOARR_scraping/rkoarr_scraping.R",
+    "project_path" : "rkoarr_scraping.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

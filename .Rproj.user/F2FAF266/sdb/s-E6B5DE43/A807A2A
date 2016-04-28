@@ -1,0 +1,18 @@
+{
+    "contents" : "##Riigi- ja kohaliku omavalitsuse asutuste riikliku registri andmete kraapimine\n\n[RKOARRi](http://register.fin.ee/register/index.php \"http://register.fin.ee/register/index.php\") andmete kraapimine. Kuna sealt ei ole võimalik andmeid kätte saada normaalsel viisil, siis kraabin andmed välja.",
+    "created" : 1461836467308.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1834585807",
+    "id" : "A807A2A",
+    "lastKnownWriteTime" : 1461837269,
+    "path" : "~/R/RKOARR_scraping/readme.Rmd",
+    "project_path" : "readme.Rmd",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}

@@ -1,0 +1,3 @@
+##Riigi- ja kohaliku omavalitsuse asutuste riikliku registri andmete kraapimine
+
+[RKOARRi](http://register.fin.ee/register/index.php "http://register.fin.ee/register/index.php") andmete kraapimine. Kuna sealt ei ole võimalik andmeid kätte saada normaalsel viisil, siis kraabin andmed välja.
