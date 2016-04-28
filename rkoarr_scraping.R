@@ -1,8 +1,8 @@
 library(rvest)
 #loobime veebist andmed
 tulem=c()
-for (i in 1:100) {
-  url=paste0("http://register.fin.ee/register/index.php?&asuttyyp=&regname=&tunnus=aruanded&regkoodfrom=&regkoodto=&aadr=&korgkood=&action=searchnow&out=&slimit=999&report=72&page=",
+for (i in 1:175) { #tuleb käsitsi vaadata, kas ehk on juurde tulnud
+  url=paste0("http://register.fin.ee/register/index.php?&asuttyyp=&regname=&tunnus=aruanded&regkoodfrom=&regkoodto=&aadr=&korgkood=&action=searchnow&out=&slimit=3000&report=72&page=",
   i)
   html_source =url
   page = read_html(html_source)
@@ -43,6 +43,7 @@ rkoarr=as.data.frame(lapply(rkoarr, function(y) gsub("Ć¶", "ö", y)))
 rkoarr=as.data.frame(lapply(rkoarr, function(y) gsub("Ć„", "Ä", y)))
 rkoarr=as.data.frame(lapply(rkoarr, function(y) gsub("Ć„", "Ä", y)))
 rkoarr=as.data.frame(lapply(rkoarr, function(y) gsub("Ć", "Ü", y)))
+rkoarr=as.data.frame(lapply(rkoarr, function(y) gsub("Ü•", "Õ", y)))
 
 #salvestame
 write.table(rkoarr, "rkoarr.csv", row.names = F, sep=";")
