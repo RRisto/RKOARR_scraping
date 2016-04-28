@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1461870988090.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "1E2ADDCA",
+    "lastKnownWriteTime" : 397116768,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "hwoxzbprai",
+        "caption" : "rkoarr2",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=rkoarr2&cache_key=hwoxzbprai",
+        "displayedObservations" : "2610",
+        "environment" : "",
+        "object" : "rkoarr2",
+        "totalObservations" : "2610",
+        "variables" : "30"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}
