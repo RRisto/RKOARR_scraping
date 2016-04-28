@@ -32,7 +32,7 @@ for (i in 1:(length(tulempuhas)/11)) {
   }
 }
 #anname veergudele nimed
-names(rkoarr)=c("Asutuse registrikood", "Asutuse täisnimi", "Maakond, linn/vald, kĆ¼la",
+names(rkoarr)=c("Asutuse registrikood", "Asutuse täisnimi", "Maakond, linn/vald, küla",
                 "Tänav/maja", "Arhiv. kp", "Lõp.akt.nimi", "Lõpet. nr",
                 "Lõpetamise akti kuupäev", "Lõpet.kp", "Arhiivis", "E-mail")
 #täpitähed korrektseks
