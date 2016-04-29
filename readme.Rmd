@@ -1,3 +1,9 @@
 ##Riigi- ja kohaliku omavalitsuse asutuste riikliku registri andmete kraapimine
 
 [RKOARRi](http://register.fin.ee/register/index.php "http://register.fin.ee/register/index.php") andmete kraapimine. Kuna sealt ei ole võimalik andmeid kätte saada normaalsel viisil, siis kraabin andmed välja.
+
+- Asutuste lihtne nimekiri on [siin](https://github.com/RRisto/RKOARR_scraping/blob/master/rkoarr.csv "https://github.com/RRisto/RKOARR_scraping/blob/master/rkoarr.csv") (info, mis on RKOARRi aruannetes)
+
+- Asutuste nimekiri koos detailinfoga on [siin](https://github.com/RRisto/RKOARR_scraping/blob/master/rkoarr_detailinfo.csv "https://github.com/RRisto/RKOARR_scraping/blob/master/rkoarr_detailinfo.csv")
+
+- Skript andmete kättesaamiseks ja puhastamiseks on [siin](https://github.com/RRisto/RKOARR_scraping/blob/master/rkoarr_scraping.R "https://github.com/RRisto/RKOARR_scraping/blob/master/rkoarr_scraping.R")
