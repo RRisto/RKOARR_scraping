@@ -151,7 +151,8 @@ for (i in 1:nrow(rkoarr)) { #tuleb käsitsi vaadata, kas ehk on juurde tulnud
 }
 
 #teeme täpitähed korda ja sodi välja
-rkoarr2=as.data.frame(lapply(rkoarr2, function(y) gsub("\r\n", "", y)))
+rkoarr2=as.data.frame(lapply(rkoarr2, function(y) gsub("\r", "", y)))
+rkoarr2=as.data.frame(lapply(rkoarr2, function(y) gsub("\n", "", y)))
 rkoarr2=as.data.frame(lapply(rkoarr2, function(y) gsub("Ā", "", y)))
 rkoarr2=as.data.frame(lapply(rkoarr2, function(y) gsub("Ć¼", "ü", y)))
 rkoarr2=as.data.frame(lapply(rkoarr2, function(y) gsub("Ćµ", "õ", y)))
