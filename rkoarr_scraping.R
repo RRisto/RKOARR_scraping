@@ -150,10 +150,16 @@ for (i in 1:nrow(rkoarr)) { #tuleb käsitsi vaadata, kas ehk on juurde tulnud
   tekst=c()#uueks loobiks nulli
 }
 
-html_source ="http://register.fin.ee/register/viewasutus.php?regkood=70000740&strip=tegevusala"
-page = read_html(html_source)
-tegevusala=page %>% 
-  html_nodes("li") %>%
-  html_text()
-tegevusala
+#teeme täpitähed korda ja sodi välja
+rkoarr2=as.data.frame(lapply(rkoarr2, function(y) gsub("\r\n", "", y)))
+rkoarr2=as.data.frame(lapply(rkoarr2, function(y) gsub("Ā", "", y)))
+rkoarr2=as.data.frame(lapply(rkoarr2, function(y) gsub("Ć¼", "ü", y)))
+rkoarr2=as.data.frame(lapply(rkoarr2, function(y) gsub("Ćµ", "õ", y)))
+rkoarr2=as.data.frame(lapply(rkoarr2, function(y) gsub("Ć¤", "ä", y)))
+rkoarr2=as.data.frame(lapply(rkoarr2, function(y) gsub("Ć¶", "ö", y)))
+rkoarr2=as.data.frame(lapply(rkoarr2, function(y) gsub("Ć„", "Ä", y)))
+rkoarr2=as.data.frame(lapply(rkoarr2, function(y) gsub("Ć", "Ü", y)))
+rkoarr2=as.data.frame(lapply(rkoarr2, function(y) gsub("Ü•", "Õ", y)))
 
+#salvestame
+write.table(rkoarr2, "rkoarr_detailinfo.csv", sep=";", row.names = F)
