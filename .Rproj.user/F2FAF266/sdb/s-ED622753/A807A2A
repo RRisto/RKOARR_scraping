@@ -1,0 +1,18 @@
+{
+    "contents" : "##Riigi- ja kohaliku omavalitsuse asutuste riikliku registri andmete kraapimine\n\n[RKOARRi](http://register.fin.ee/register/index.php \"http://register.fin.ee/register/index.php\") andmete kraapimine. Kuna sealt ei ole võimalik andmeid kätte saada normaalsel viisil, siis kraabin andmed välja.\n\n- Asutuste lihtne nimekiri on [siin](https://github.com/RRisto/RKOARR_scraping/blob/master/rkoarr.csv \"https://github.com/RRisto/RKOARR_scraping/blob/master/rkoarr.csv\") (info, mis on RKOARRi aruannetes)\n\n- Asutuste nimekiri koos detailinfoga on [siin](https://github.com/RRisto/RKOARR_scraping/blob/master/rkoarr_detailinfo.csv \"https://github.com/RRisto/RKOARR_scraping/blob/master/rkoarr_detailinfo.csv\")\n\n- Skript andmete kättesaamiseks ja puhastamiseks on [siin](https://github.com/RRisto/RKOARR_scraping/blob/master/rkoarr_scraping.R \"https://github.com/RRisto/RKOARR_scraping/blob/master/rkoarr_scraping.R\")",
+    "created" : 1461836467308.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2702497135",
+    "id" : "A807A2A",
+    "lastKnownWriteTime" : 1461907476,
+    "path" : "~/R/RKOARR_scraping/readme.Rmd",
+    "project_path" : "readme.Rmd",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}
